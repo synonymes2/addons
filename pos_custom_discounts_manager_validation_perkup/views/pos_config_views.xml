@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_pos_config_custom_discount_manager_validation_form" model="ir.ui.view">
+        <field name="name">view.pos.config.custom.discount.manager.validation.form</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="pos_manager_validation_mac5.view_pos_config_manager_validation_form"/>
+        <field name="arch" type="xml">
+            <field name="iface_validate_discount" position="after">
+                <field name="iface_validate_custom_discounts"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="stock_picking_type_action_custom" model="ir.actions.act_window">
+			<field name="name">Inventory</field>
+			<field name="res_model">stock.picking.type</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">kanban,form</field>
+			<field name="domain">[('code', '=', 'incoming')]</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to create a new picking type.
+				</p>
+				<p>
+					The picking type system allows you to assign each stock
+					operation a specific type which will alter its views accordingly.
+					On the picking type you could e.g. specify if packing is needed by
+					default,
+					if it should show the customer.
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="main_custom_stock_menu_custom" name="Inventory"
+			sequence="30" groups="group_inventory_receipt_type_user" web_icon="stock,static/description/icon.png" />
+
+		<menuitem action="stock_picking_type_action_custom" id="stock_picking_type_menu_custom"
+			parent="main_custom_stock_menu_custom" name="Dashboard" />
+
+        <record id="view_picking_form_inherit_inventory_user" model="ir.ui.view">
+            <field name="name">stock.picking.form</field>
+            <field name="model">stock.picking</field>
+            <field eval="12" name="priority"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+            <xpath expr="//button[@name='do_new_transfer']" position="attributes">
+                <attribute name="groups">stock.group_stock_user,custom_inventory_security.group_inventory_receipt_type_user</attribute>
+            </xpath>
+            </field>
+        </record>
+	</data>
+</odoo>
+           

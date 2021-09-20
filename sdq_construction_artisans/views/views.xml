@@ -1,0 +1,102 @@
+<odoo>
+    <!--    <?xml version="1.0" encoding="utf-8"?>-->
+
+
+    <!--tree view of the project model-->
+
+    <record id="construction_artisans_tree" model="ir.ui.view">
+        <field name="name">construction_artisans_tree</field>
+        <field name="model">construction.artisans</field>
+        <field name="arch" type="xml">
+            <tree string="Artisan">
+                <field name="name_seq"/>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="projet"/>
+                <field name="company_id"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--form view of the patient model-->
+    <record id="construction_artisans_form" model="ir.ui.view">
+        <field name="name">construction.artisans.form</field>
+        <field name="model">construction.artisans</field>
+        <field name="arch" type="xml">
+            <form string="Artisan">
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <group>
+                            <label for="name" string="Artisan" class="col-3 col-lg-3 o_light_label"/>
+                            <div>
+                                <h1>
+                                    <field name="name"/>
+                                    <!--                                    <field name="name"/>-->
+                                    <!--                                    <field name="category"/>-->
+                                </h1>
+                            </div>
+                            <label for="name" string="Cateogie" class="col-3 col-lg-3 o_light_label"/>
+
+                            <group>
+                                <div>
+                                    <h1>
+                                        <!--                                    <field name="name"/>-->
+                                        <!--                                    <field name="name"/>-->
+                                        <field name="category"/>
+                                    </h1>
+                                </div>
+                            </group>
+                        </group>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="projet"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="signed_contract"/>
+                            <field name="notes"/>
+                        </group>
+                    </group>
+                    <separator string="Avances"/>
+                    <notebook>
+                        <page name="info" string="Avances">
+                            <field name="order_line" nolabel="1">
+                                <tree editable="top">
+                                </tree>
+                                <field name="order_id"/>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="construction_artisans_action" model="ir.actions.act_window">
+        <field name="name">Artisan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">construction.artisans</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,kanban,graph,pivot</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                !!!!
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem name="Artisan" id="sdq_construction_artisans.menu_1" sequence="1"/>
+    <menuitem name="Artisan" id="sdq_construction_artisans.menu_11" sequence="2" action="construction_artisans_action"
+              parent="sdq_construction_artisans.menu_1"/>
+</odoo>

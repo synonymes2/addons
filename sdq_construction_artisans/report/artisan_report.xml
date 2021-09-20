@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="artisan_report_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <!--         Advances deails               -->
+                        <center>
+                            <u style="color:green">
+                                <i>
+                                    <h1 calss="text-center" style="color:red">Artisan Report</h1>
+                                </i>
+                            </u>
+                        </center>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <span width="300px">
+                            <h3><u>Name</u>:
+                                <b>
+                                    <span t-field='o.name'/>
+                                </b>
+                            </h3>
+                            <br/>
+
+                            <h3><u>Catégorie</u>:
+                                <b>
+                                    <span t-field='o.category'/>
+                                </b>
+                            </h3>
+                            <br/>
+
+                            <h3><u>projet</u>:
+                                <b>
+                                    <span t-field='o.projet'/>
+                                </b>
+                            </h3>
+                            <br/>
+
+                            <h3><u>societe</u>:
+                                <b>
+                                    <span t-field='o.company_id'/>
+                                </b>
+                            </h3>
+                            <br/>
+                            <h3><u>total des avonces</u>:
+                                <b>
+                                    <span t-field='o.company_id'/>
+                                </b>
+                            </h3>
+                        </span>
+                        <br/>
+                        <span >
+                            <h3><u>Date de signature</u>:
+                                <b>
+                                    <span t-field='o.date'/>
+                                </b>
+                                <br/>
+                                <u>Description</u>:
+
+                                <b>
+                                    <span t-field='o.notes'/>
+                                </b>
+                            </h3>
+                            <br/>
+                        </span>
+                        <u>
+                            <h1 calss="text-center">Détails des Avances</h1>
+                        </u>
+                        <br/>
+                        <table class="text-center" calss="table table-hover">
+                            <thead>
+                                <th>Seq</th>
+                                <th>Montant</th>
+                                <th>Motif</th>
+                                <th>Date</th>
+                            </thead><!--
+                            <tbody class="text-center">
+                                <td>
+                                    <span t-field="o.seq"/></td>
+                                <td>
+                                        <span t-field="o.total_amount"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.motif"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.date"/>
+                                    </td>
+                            </tbody>-->
+                        </table>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

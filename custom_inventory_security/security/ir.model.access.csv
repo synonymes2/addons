@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ir_ui_menu,access_ir_ui_menu,base.model_ir_ui_menu,custom_inventory_security.group_inventory_receipt_type_user,1,1,1,0
+access_ir_ui_view,access_ir_ui_view,base.model_ir_ui_view,custom_inventory_security.group_inventory_receipt_type_user,1,1,1,0
+access_stock_warehouse,access_stock_warehouse,stock.model_stock_warehouse,custom_inventory_security.group_inventory_receipt_type_user,1,1,1,0
+access_stock_picking,access_stock_picking,stock.model_stock_picking,custom_inventory_security.group_inventory_receipt_type_user,1,1,0,0
+access_stock_move,access_stock_move,stock.model_stock_move,custom_inventory_security.group_inventory_receipt_type_user,1,1,1,0

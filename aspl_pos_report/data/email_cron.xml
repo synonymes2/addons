@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.cron" id="z_report_email_cron">
+            <field name="name">Z Report Email Cron</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type"></field>
+            <field name="numbercall">0</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'pos.session'"/>
+            <field name="function" eval="'run_scheduler'"/>
+            <field name="args" eval="'()'"/>
+        </record>
+
+    </data>
+</odoo>

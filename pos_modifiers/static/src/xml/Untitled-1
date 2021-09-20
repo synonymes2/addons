@@ -1,0 +1,36 @@
+ <t t-foreach="changes.new" t-as="change">
+            
+                <t t-if="change.modifier.length > 0">
+                   
+                        <line>
+                     <!--  <left><div size='normal'><span  bold='off' size='normal'><t t-esc="change.qty" /></span>-<span  bold='off' size='normal'><t t-esc="change.modifier"/></span></div></left>  -->
+                 <left><div  size='small-height'><span bold='off' style="font-size: 2%;" size='small-height' ><t t-esc="change.qty" /></span>#<span bold='off' size='small-height'><t t-esc="change.name"/></span></div></left>  
+
+                      
+                        </line>
+                 </t>       
+                <!--<div><span bold='off' size='normal'><t t-esc="change.qty" /></span> / <span bold='off' size='normal'><t t-esc="change.modifier"/></span></div>-->
+                <t t-if="change.modifier.length == 0">                
+                        <line>
+                            <left><value><t t-esc="change.qty" /></value></left>
+                            <right><t t-esc="change.name_wrapped[0]" /></right>
+                        </line>
+              </t>  
+                    <t t-call="NameWrapped"/>
+                    <t t-if="change.note">
+                        <line>
+                            <left>NOTE</left>
+                            <right>...</right>
+                        </line>
+                        <div><span font='b' bold='off' line-ratio='0.4' indent='1' width='30'>--- <t t-esc="change.note" /></span></div>
+                        <line></line>
+                    </t>
+                </t>
+                <br />
+                <br />
+            </t>
+        </receipt>
+    </t>
+
+
+

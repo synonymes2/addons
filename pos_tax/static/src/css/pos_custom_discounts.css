@@ -1,0 +1,45 @@
+
+.wk_product_discount{    
+  
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 100px;
+    font-size: 11px;
+    margin: 8px !important;
+    width: 122px;
+    height: 115px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    border-bottom-width: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+.discount_percent{
+    color: #555;
+    background: none;
+    height: 10px;
+    width: 10px;
+    padding-bottom: 8px;
+    margin-top: -27px;
+    margin-left: 21px; 
+    font-style: bold
+}
+
+.fa-stack-discount{
+        position:relative;
+        padding-left:6px;
+        margin-right: 125px;
+        width: 147px;
+}
+.fa-scissors {
+        position:absolute;
+        left:2px;
+        top:-1px;
+}
+.fa-scissors:before {
+        font-size:12px;
+}

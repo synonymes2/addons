@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ConfirmCloseSessionPopupWizard">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput" style="height: 203px;">
+                <p class="title">Confirmation</p>
+                Do you want to close this session?
+                <div class="footer">
+                    <div class="button confirm">
+                        Yes
+                    </div>
+                    <div class="button cancel">
+                        No
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="TenderPopupWizard">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput tender_popup">
+                <p class="title" style="margin-bottom: 5px;">
+                    Please Insert Tender
+                </p>
+             <!--   <div style="font-size: 16px;text-align: left;margin-left: 15px;">
+                    Difference: <t t-esc="widget.format_currency(widget.difference)"/>
+                </div> -->
+                <div class="tender_container">
+                    <div>
+	                    <table id="tender">
+	                        <t t-foreach="widget.pos.cashregisters" t-as="cashregister">
+	                            <tr t-att-journal-id='cashregister.journal_id[0]'>
+		                            <td>
+		                                <t t-esc="cashregister.journal_id[1]"/>
+		                            </td>
+		                            <td>
+		                                <input type="text"/>
+		                            </td>
+		                        </tr>
+	                        </t>
+	                    </table>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        Close Session
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="OpeningBalanceScreenWidget">
+        <div class="opening-balance-screen screen">
+             <div class="screen-content">
+                <section class="top-content select-user" style="border-bottom: none;">
+                    <button id="skip">Skip</button>
+                    <div class='cash-control-header'>
+                        Opening Cash Control
+                    </div>
+                </section>
+                <section class="full-content" style="top: 80px;overflow: auto;">
+                    <div class='window'>
+                        <section class='subwindow'>
+                            <div class='subwindow-container'>
+                                <div class='subwindow-container-fix touch-scrollable scrollable-y'>
+                                    <div class="open_Cash_control_container">
+                                        <table id="opening_cash_table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Coin/Bill Value</th>
+                                                    <th>Number of Coins/Bills</th>
+                                                    <th>Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                        <div id="open_balance_add" style="width:100%;">
+                                            <div style="position: fixed;bottom: 10%;float:left">
+                                                <button id="add_open_balance">Add New Item</button>
+                                            </div>
+                                            <div style="position: fixed;bottom: 10%;float:right;margin-left:45%;">
+                                                <h2>Subtotal :<span class="open_subtotal" style="margin-left: 15px;"></span></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="open_footer">
+                    <button id="validate_open_balance">Validate Cash</button>
+                </div>
+             </div>
+        </div>
+    </t>
+
+</templates>

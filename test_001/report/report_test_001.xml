@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="test_sadik_report">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <!--         Project Note               -->
+                        <h1 calss="text-center">Stock</h1>
+                        <table class="text-center" calss="table table-hover">
+                            <thead>
+                                <th>Article</th>
+                                <th>Qté Hier</th>
+                                <th>Qtt Livré</th>
+                                 <th>Qtt vendu</th>
+                                 <th>Reste</th>
+                            </thead>
+                            <tbody class="text-center">
+                                <td>
+                                    <span t-field="o.value"/>
+                                </td>
+                                <td>
+<!--                                    <span t-field="o.Task"/>-->
+                                </td>
+                                <td>
+<!--                                    <span t-field="o.Responsible"/>-->
+                                </td>
+                            </tbody>
+                        </table>
+                        <!--P2-->
+                        <!--         Project Note
+                        <h1>Porject Initiation</h1>  -->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th> Project</th>-->
+                        <!--                                <th>Customer</th>-->
+                        <!--                                <th>Assigned Date</th>-->
+                        <!--                                 <th>Deadline</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Projet"/></td>-->
+                        <!--                                <td><span t-field="o.Customer"/></td>-->
+                        <!--                                <td><span t-field="o.Assigned_Date"/></td>-->
+                        <!--                                <td><span t-field="o.Deadline"/></td>-->
+
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--                                                 &lt;!&ndash;      Timesheet     &ndash;&gt;-->
+                        <!--                        <h1 >Timesheet</h1>-->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th>Date</th>-->
+                        <!--                                <th>User</th>-->
+                        <!--                                <th>Description</th>-->
+                        <!--                                 <th>Analytic</th>-->
+                        <!--                                <th>Duration</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Date"/></td>-->
+                        <!--                                <td><span t-field="o.User"/></td>-->
+                        <!--                                <td><span t-field="o.Description"/></td>-->
+                        <!--                                <td><span t-field="o.Analytic"/></td>-->
+                        <!--                                <td><span t-field="o.Duration"/></td>-->
+
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--      SubTask
+                        <h1>SubTask</h1> -->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th>Task Title</th>-->
+                        <!--                                <th>Projet</th>-->
+                        <!--                                <th>Assigned To</th>-->
+                        <!--                                 <th>Initially Planned Hours</th>-->
+                        <!--                                <th>Stage</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Task_Title"/></td>-->
+                        <!--                                <td><span t-field="o.Projet"/></td>-->
+                        <!--                                <td><span t-field="o.Assigned"/></td>-->
+                        <!--                                <td><span t-field="o.Initially"/></td>-->
+                        <!--                                <td><span t-field="o.Stage"/></td>-->
+
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--                         &lt;!&ndash;P3&ndash;&gt;-->
+                        <!--                         &lt;!&ndash;         Browseinfo             &ndash;&gt;-->
+                        <!--                        <h1 >Browseinfo</h1>-->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th> Customer</th>-->
+                        <!--                                <th>Project Manager</th>-->
+
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Customer"/></td>-->
+                        <!--                                 <td><span t-field="o.Projet_Manager"/></td>-->
+
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--                         &lt;!&ndash;      Tasks :   &ndash;&gt;-->
+                        <!--                        <h1 >SubTask</h1>-->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th>Task Name</th>-->
+                        <!--                                <th>Planned Hours</th>-->
+                        <!--                                <th>Remainig Hours</th>-->
+                        <!--                                 <th>Assigned Date</th>-->
+                        <!--                                <th>Deadline</th>-->
+                        <!--                                <th>Stage</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Task_Name"/></td>-->
+                        <!--                                <td><span t-field="o.Planned"/></td>-->
+                        <!--                                <td><span t-field="o.Remainig"/></td>-->
+                        <!--                                <td><span t-field="o.Assigned"/></td>-->
+                        <!--                                <td><span t-field="o.Deadline"/></td>-->
+                        <!--                                <td><span t-field="o.Stage"/></td>-->
+
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--                        &lt;!&ndash;P4&ndash;&gt;-->
+                        <!--                        &lt;!&ndash;      Sale Order :   &ndash;&gt;-->
+                        <!--                        <h1 >Sale Order : </h1>-->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th>Order Number</th>-->
+                        <!--                                <th>Order Date</th>-->
+                        <!--                                <th>Customer</th>-->
+                        <!--                                 <th>Salesperson</th>-->
+                        <!--                                <th>Total</th>-->
+                        <!--                                <th>Invoice Status</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Order_Number"/></td>-->
+                        <!--                                <td><span t-field="o.Order_Date"/></td>-->
+                        <!--                                <td><span t-field="o.Customer"/></td>-->
+                        <!--                                <td><span t-field="o.Salesperson"/></td>-->
+                        <!--                                <td><span t-field="o.Total"/></td>-->
+                        <!--                                <td><span t-field="o.Invoice_Status"/></td>-->
+
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--                          &lt;!&ndash;      Inventory Usage   &ndash;&gt;-->
+                        <!--                        <h1 >Inventory Usage </h1>-->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th>Product </th>-->
+                        <!--                                <th>Project</th>-->
+                        <!--                                <th>Product UOM</th>-->
+                        <!--                                 <th>Quantity</th>-->
+                        <!--                                <th>Price Unit</th>-->
+                        <!--                                <th>Price Subtotal</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Product"/></td>-->
+                        <!--                                <td><span t-field="o.Project"/></td>-->
+                        <!--                                <td><span t-field="o.Product_UOM"/></td>-->
+                        <!--                                <td><span t-field="o.Quantity"/></td>-->
+                        <!--                                <td><span t-field="o.Price_Unit"/></td>-->
+                        <!--                                <td><span t-field="o.Price_Subtotal"/></td>-->
+
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--                         &lt;!&ndash;P5&ndash;&gt;-->
+                        <!--                        &lt;!&ndash;    Project Deliverables  &ndash;&gt;-->
+                        <!--                        <h1 >Project Deliverables </h1>-->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th>Material</th>-->
+                        <!--                                <th>Products</th>-->
+                        <!--                                <th>Planned Qty</th>-->
+                        <!--                                 <th>User Qty</th>-->
+                        <!--                                <th>State</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Material"/></td>-->
+                        <!--                                <td><span t-field="o.Products"/></td>-->
+                        <!--                                <td><span t-field="o.Planned"/></td>-->
+                        <!--                                <td><span t-field="o.User_Qty"/></td>-->
+                        <!--                                <td><span t-field="o.State"/></td>-->
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <!--                          &lt;!&ndash;      Work Package  &ndash;&gt;-->
+                        <!--                        <h1 >Work Package </h1>-->
+                        <!--                        <table  calss="table table-hover">-->
+                        <!--                            <thead>-->
+                        <!--                                <th>Work Package </th>-->
+                        <!--                                <th>Product UOM</th>-->
+                        <!--                                <th>Quantity</th>-->
+                        <!--                                 <th>Price Unit</th>-->
+                        <!--                                <th>Price Subtotal</th>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody class="text-center">-->
+                        <!--                                <td><span t-field="o.Work_Package"/></td>-->
+                        <!--                                <td><span t-field="o.Product_UOM"/></td>-->
+                        <!--                                <td><span t-field="o.Quantity"/></td>-->
+                        <!--                                <td><span t-field="o.Price_Unit"/></td>-->
+                        <!--                                <td><span t-field="o.Price_Subtotal"/></td>-->
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

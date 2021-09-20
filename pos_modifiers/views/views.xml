@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_config_form">
+            <field name="name">pos.config.form.view</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_config_form" />
+            <field name="arch" type="xml">
+                <field name="iface_display_categ_images" position="after">
+                    <field name='allow_modifiers' />
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_normal_form_view">
+            <field name="name">product.product.view.form.easy</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <field name="attribute_value_ids" position="before">
+                    <field name='has_modifier' /><label string="Has Modifiers"/>
+                </field>
+                <notebook position="inside">
+                    <page name="modifiers" string="Modifiers">
+                        <field name="modifiers_id">
+                            <tree editable="bottom">
+                                <field name="product_id" domain="[('available_in_pos', '=', True)]"/>
+                                <field name="amount"/>
+                                <field name="qty"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <report
+        id="artisan_report"
+        string="Print Document"
+        model="construction.artisans"
+        report_type="qweb-pdf"
+        name="sdq_construction_artisans.artisan_report_template"
+        />
+    </data>
+</odoo>

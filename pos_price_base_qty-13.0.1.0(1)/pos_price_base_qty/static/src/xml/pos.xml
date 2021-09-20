@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="EnterProductPriceWidget">
+        <div class="modal-dialog">
+            <div class="popup">
+                <p class="title">
+                    Price Based Quantity
+                </p>
+                <div class="content-container ">
+                    <br/>
+                    Amount: <input type="text" class="product_price"/>
+                </div>
+                <div class="footer">
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                    <div class="button product_price_button">
+                        Ok
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ProductPriceQtyButton">
+        <div class='control-button'>
+            <i class='fa fa-tag' />Price=Qty 
+        </div>
+    </t>
+</templates>

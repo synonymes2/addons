@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <report
+        id="sadik_report"
+        string="print report"
+        model="test_001.test_001"
+        report_type="qweb-pdf"
+        name="test_001.test_sadik_report"
+        />
+    </data>
+</odoo>
